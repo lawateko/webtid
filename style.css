@@ -1,0 +1,127 @@
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"); */
+
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* untuk logo */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+body {
+  /* padding: 0px;
+  margin: 0; */
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  background-color: #eee;
+  /* background-image: url('img/img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll; */
+}
+
+.header {
+  text-align: center;
+  border-radius: 4px;
+  padding: 50px;
+  background-color: rgb(54, 218, 163);
+}
+
+.header h1 {
+  color: white;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+}
+
+.form {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px 20px;
+  border: 0.5px solid black;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+input::placeholder {
+  font-weight: 400;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.content {
+  background-color: white;
+  padding: 20px 50px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.content h2.title {
+  /* font-style: italic; */
+  margin-top: 10px;
+  color: rgb(45, 83, 211);
+  font-size: 2.1rem;
+}
+
+.container-fluid .myLogo {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+nav .navbar-nav .nav-link {
+  font-size: 1em;
+  margin-right: 14px;
+  margin-left: 14px;
+  color: #a5a5a5;
+}
+
+nav .navbar-nav .nav-link:hover {
+  color: rgb(0, 0, 0);
+}
+
+.centered-jumbo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.mahasiswa-container {
+  padding-top: 7rem;
+}
+
+.matkul-card {
+  padding-top: 7rem;
+}
+
+.dosen {
+  padding-top: 6rem;
+}
+
+.galeri {
+  padding-top: 6rem;
+}
+
+.kontak {
+  padding-top: 7rem;
+}

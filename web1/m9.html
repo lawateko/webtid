@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Client</h1>
+    <table>
+        <tr>
+            <td width="50%">
+                <div class="form">
+                    <div>
+                        <label for="">Nama</label>
+                        <input type="text" id="nama">
+                    </div>
+                    <div>
+                        <label for="">Nilai UTS</label>
+                        <input type="text" id="uts">
+                    </div>
+                    <div>
+                        <label for="">Nilai UAS</label>
+                        <input type="text" id="uas">
+                    </div>
+                    <div>
+                        <label for="">Nilai TUGAS</label>
+                        <input type="text" id="tugas">
+                    </div>
+                    <div>
+                        <button class="hijau" onclick="cetak()">Cetak</button>
+                    </div>
+                </div>
+            </td>
+            <td width="50%">
+                <div class="form" id="hasil"></div>
+                <div class="form" id="output"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function cetak() {
+
+            var status, grade;
+
+            var data = {
+                nama: document.getElementById("nama").value,
+                uts: document.getElementById("uts").value,
+                uas: document.getElementById("uas").value,
+                tugas: document.getElementById("tugas").value,
+                nilai_akhir: function () {
+                    return this.uts * 0.3 + this.uas * 0.3 + this.tugas * 0.4;
+                }
+            }
+
+            if (data.nilai_akhir() >= 80 && data.nilai_akhir() <= 100) {
+                grade = "A";
+            } else if (data.nilai_akhir() >= 70 && data.nilai_akhir() <= 79) {
+                grade = "B";
+            } else if (data.nilai_akhir() >= 60 && data.nilai_akhir() <= 69) {
+                grade = "C";
+            } else if (data.nilai_akhir() >= 50 && data.nilai_akhir() <= 59) {
+                grade = "D";
+            } else if (data.nilai_akhir() >= 0 && data.nilai_akhir() <= 49) {
+                grade = "E";
+            } else {
+                grade = "-";
+            }
+
+            switch (grade) {
+                case "A":
+                case "B":
+                case "C":
+                    status = "LULUS";
+                    break;
+                case "D":
+                    status = "PERBAIKAN";
+                    break;
+                case "E":
+                    status = "TIDAK LULUS";
+                    break;
+                default:
+                    status = "-";
+                    break;
+            }
+
+            // var nama = document.getElementById("nama").value;
+            // var uts = document.getElementById("uts").value;
+            // var uas = document.getElementById("uas").value;
+            // var tugas = document.getElementById("tugas").value;
+
+            //var na = uts * 0.3 + uas * 0.3 + tugas * 0.4;
+
+            document.getElementById("hasil").innerHTML = "Nama : " + data.nama + "<br>UTS : " + data.uts + "<br>UAS : " + data.uas + "<br>Tugas : " + data.tugas + "<br>Nilai Akhir : " + data.nilai_akhir() + "<br>Grade : " + grade + "<br>Status : " + status;
+        }
+
+        // variabel
+        // var namavariabel = nilai;
+        // String nama, Integer nilai
+        var nama = "Tono";  // string 
+        var nilai = 90;     // number
+        var alamat;         // undefined
+        alamat = "Ambon";   // string
+        nama = "Jaenudin";
+
+        // object{} -> property, method, array[] -> indeks -> 0
+        // var mahasiswa = [123, "Tono", "Teknik Informatika"];
+        // var mahasiswa = [];
+        // mahasiswa[0] = 123;
+        // mahasiswa[1] = "Tono";
+        // mahasiswa[2] = "Teknik Informatika";
+
+        var mhs = {
+            nim: 123,
+            nama: "Joko",
+            jurusan: "Teknik Informatika",
+            tahun_lahir: 2003,
+            umur: function () {
+                return 2025 - this.tahun_lahir + " Tahun";
+            }
+        };
+
+        // object.property
+        // alert(mhs.umur());
+
+        // document.getElementById("output").innerHTML = "Halo " + nama;
+        // document.write(5 >= 5 || 7 === "7");
+        // console.log("Halo");
+        // alert("Halo " + nama);
+
+
+        // percabangan
+        // if           -> 1 kondisi (true)
+        // if else      -> 2 kondisi (true, false)
+        // if else if   -> > 2 kondisi
+        // switch case  -> single value
+
+        // perulangan (nilai awal, kondisi, statement, counter)
+        // for
+        // for (var i = 1; i <= 5; i++) {
+        //     document.write(i);
+        // }
+
+        // while
+        // var i = 1;
+        // while (i <= 3) {
+        //     document.write(i);
+        //     i++;
+        // }
+
+        // do while
+
+        // var j = 1;
+        // do {
+        //     document.write(j);
+        //     j++;
+        // } while (j <= 7);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+<h2 class="dosen title">Dosen</h2>
+<p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, autem accusamus temporibus aut placeat neque dolore a aliquam cum ipsa fuga, minima praesentium facilis fugiat odio quis reiciendis ducimus ad ex sint illum. Ex voluptas quisquam fugiat reprehenderit obcaecati, omnis odio sequi alias similique nam praesentium harum animi nisi provident.</p>
+<img src="../cover.jpg" alt="">
