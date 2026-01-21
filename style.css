@@ -99,7 +99,7 @@ nav .navbar-nav .nav-link:hover {
   color: rgb(0, 0, 0);
 }
 
-.centered-jumbo{
+.centered-jumbo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +107,10 @@ nav .navbar-nav .nav-link:hover {
 }
 
 .mahasiswa-container {
+  padding-top: 7rem;
+}
+
+.dosen-container {
   padding-top: 7rem;
 }
 
