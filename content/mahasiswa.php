@@ -1,5 +1,5 @@
 <?php
-require 'config/koneksi.php';
+require_once 'config/koneksi.php';
 
 $sql = "SELECT * FROM mahasiswa";
 $stmt = $con->prepare($sql);
@@ -12,25 +12,23 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="row g-4">
         <div class="col-lg-4 col-md-5 col-sm-12">
             <div class="card shadow-sm p-3">
-                <form action="" method="">
+                <form action="index.php?page=mahasiswa_save" method="post">
                     <div class="mb-4">
                         <label for="#" class="form-label fs-5">NIM</label>
-                        <input type="number" class="form-control border-3 p-2" id="#" required>
+                        <input type="number" name="nim" class="form-control border-3 p-2" id="#" required>
                     </div>
-
                     <div class="mb-4">
                         <label for="#" class="form-label fs-5">Nama</label>
-                        <input type="text" class="form-control border-3 p-2" id="#" required>
+                        <input type="text" name="nama" class="form-control border-3 p-2" id="#" required>
                     </div>
-
                     <div class="mb-4">
                         <label for="#" class="form-label fs-5">Alamat</label>
-                        <input type="text" class="form-control border-3 p-2" id="#" required>
+                        <input type="text" name="alamat" class="form-control border-3 p-2" id="#" required>
                     </div>
 
                     <div class="mb-4">
                         <label for="#" class="form-label fs-5">Jurusan</label>
-                        <select name="#" id="#" class="form-control border-3 p-2">
+                        <select name="jurusan" id="#" class="form-control border-3 p-2">
                             <option value="teknik-informatika">Teknik Informatika</option>
                             <option value="sistem-informasi">Sistem Informasi</option>
                             <option value="desain-komunukasi-visual">Desain Komunikasi Visual</option>
