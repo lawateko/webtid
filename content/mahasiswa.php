@@ -1,8 +1,18 @@
+<?php
+require 'config/koneksi.php';
+
+$sql = "SELECT * FROM mahasiswa";
+$stmt = $con->prepare($sql);
+$stmt->execute();
+$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <div class="mahasiswa-container container mt-3">
     <div class="row g-4">
         <div class="col-lg-4 col-md-5 col-sm-12">
             <div class="card shadow-sm p-3">
-                <form>
+                <form action="" method="">
                     <div class="mb-4">
                         <label for="#" class="form-label fs-5">NIM</label>
                         <input type="number" class="form-control border-3 p-2" id="#" required>
@@ -43,19 +53,28 @@
                     <table class="table table-striped table-hover fs-5">
                         <thead class="table-dark">
                             <tr>
+                                <th scope="col">No</th>
                                 <th scope="col">NIM</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">Jurusan</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody class="table-group-divider">
-                            <tr>
-                                <td>240101115</td>
-                                <td>Fanuel Lawalata</td>
-                                <td>Kairatu</td>
-                                <td>Teknik Informatika</td>
-                            </tr>
+                            <?php foreach ($data as $row): ?>
+                                <tr>
+                                    <td><?php echo $row['no']; ?></td>
+                                    <td><?php echo $row['nim']; ?></td>
+                                    <td><?php echo $row['nama']; ?></td>
+                                    <td><?php echo $row['alamat']; ?></td>
+                                    <td><?php echo $row['jurusan']; ?></td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Edit</a>
+                                        <a href="" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

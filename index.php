@@ -22,8 +22,8 @@
                 <div class="navbar-nav ms-auto p-3 fw-medium">
                     <a href="index.php" class="nav-link">HOME</a>
                     <a href="index.php?page=mahasiswa" class="nav-link">MAHASISWA</a>
-                    <a href="index.php?page=matakuliah" class="nav-link">MATAKULIAH</a>
                     <a href="index.php?page=dosen" class="nav-link">DOSEN</a>
+                    <a href="index.php?page=matakuliah" class="nav-link">MATAKULIAH</a>
                     <a href="index.php?page=galeri" class="nav-link">GALERI</a>
                     <a href="index.php?page=kontak" class="nav-link">KONTAK</a>
                 </div>
@@ -38,10 +38,10 @@
         $page = @$_GET['page'];
         if (empty($page)) {
             # index.php
-            include "myContent/home.php";
+            include "content/home.php";
         } else {
             # index.php?page=...
-            include "myContent/$page.php";
+            include "content/$page.php";
         }
 
         ?>
