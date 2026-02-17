@@ -20,12 +20,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto p-3 fw-medium">
-                    <a href="index.php" class="nav-link">HOME</a>
-                    <a href="index.php?page=mahasiswa" class="nav-link">MAHASISWA</a>
-                    <a href="index.php?page=dosen" class="nav-link">DOSEN</a>
-                    <a href="index.php?page=matakuliah" class="nav-link">MATAKULIAH</a>
-                    <a href="index.php?page=galeri" class="nav-link">GALERI</a>
-                    <a href="index.php?page=kontak" class="nav-link">KONTAK</a>
+                    <a href="index.php" class="nav-link">Beranda</a>
+                    <a href="index.php?page=mahasiswa" class="nav-link">Mahasiswa</a>
+                    <a href="index.php?page=dosen" class="nav-link">Dosen</a>
+                    <a href="index.php?page=matakuliah" class="nav-link">Matakuliah</a>
+                    <a href="index.php?page=jurusan" class="nav-link">Jurusan</a>
+                    <a href="index.php?page=pengguna" class="nav-link">Pengguna</a>
+                    <a href="index.php?page=galeri" class="nav-link">Galeri</a>
+                    <a href="index.php?page=kontak" class="nav-link">Kontak</a>
                 </div>
             </div>
         </div>

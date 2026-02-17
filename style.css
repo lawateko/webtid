@@ -90,7 +90,7 @@ textarea:focus::placeholder {
 
 nav .navbar-nav .nav-link {
   font-size: 1em;
-  margin-right: 14px;
+  margin-right: 8px;
   margin-left: 14px;
   color: #5a5a5a;
 }
@@ -129,3 +129,12 @@ nav .navbar-nav .nav-link:hover {
 .kontak {
   padding-top: 7rem;
 }
+
+.table-mahasiswa{
+  max-height: 334px;
+}
+
+.table-dosen{
+  max-height: 251px;
+}
+
