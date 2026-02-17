@@ -21,7 +21,7 @@ if ($sql->rowCount() == 0) {
         <div class="card">
             <div class="card-header fs-5 fw-bold">FORM EDIT DOSEN</div>
             <div class="card-body">
-                <form action="index.php?page=mhs_update" method="POST">
+                <form action="index.php?page=dosen_update" method="POST">
                     <div class="mb-3">
                         <label class="form-label fw-semibold" for="">Nomor Induk Dosen</label>
                         <input name="nid" class="form-control" value="<?php echo $row['nid']; ?>" type="text" readonly>
