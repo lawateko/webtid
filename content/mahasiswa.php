@@ -29,6 +29,7 @@ if(isset($_POST["cari"])){
                     <div class="mb-4">
                         <label for="#" class="form-label fs-5">Jurusan</label>
                         <select name="jurusan" class="form-control border-3 p-2">
+                            <option disabled selected value>--- Pilih Jurusan ---</option>
                             <option value="Teknik Informatika">Teknik Informatika</option>
                             <option value="Sistem Informasi">Sistem Informasi</option>
                             <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
