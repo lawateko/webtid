@@ -25,7 +25,7 @@
                     <a href="index.php?page=dosen" class="nav-link">Dosen</a>
                     <a href="index.php?page=matakuliah" class="nav-link">Matakuliah</a>
                     <a href="index.php?page=jurusan" class="nav-link">Jurusan</a>
-                    <a href="index.php?page=pengguna" class="nav-link">Pengguna</a>
+                    <a href="index.php?page=user" class="nav-link">Pengguna</a>
                     <a href="index.php?page=galeri" class="nav-link">Galeri</a>
                     <a href="index.php?page=kontak" class="nav-link">Kontak</a>
                 </div>
