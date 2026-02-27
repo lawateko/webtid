@@ -1,19 +1,19 @@
-# Aplikasi Manajemen Data TI3D - UAS Pemrograman Web
+# Website Manajemen Data Mahasiswa & Dosen - UAS Pemrograman Web
 
-Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen **Subhan Ramadhani, S.Kom**
+Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen Pak **Subhan Ramadhani, S.Kom**
 
-## Fitur Aplikasi
+## Fitur Website
 
 - Login dengan session
 - Multi level user (Admin & User)
 - CRUD + Search data Mahasiswa, Dosen, Matakuliah, Jurusan
-- Upload gambar di halaman Galeri
 - Hak akses berbeda tiap user
 
 ## Login Default
 
 **Admin** : lemon@example.com | 123
-            alpukat@example.com | 123
+**Admin** : alpukat@example.com | 123
+
 **User** : durian@example.com | 123
 
 ## Screenshot Halaman
