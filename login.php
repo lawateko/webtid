@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "config/koneksi.php";
 
 if (isset($_POST["login"])) {
@@ -12,7 +12,11 @@ if (isset($_POST["login"])) {
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if (password_verify($password, $user["password"])) {
+    if ($user && password_verify($password, $user["password"])) {
+        $_SESSION["login"] = true;
+        $_SESSION["user_nama"] = $user["nama_pengguna"]; // PASTIKAN INI 'nama_pengguna'
+        $_SESSION["user_email"] = $user["email"];
+        $_SESSION["user_role"] = $user["role"];
 
         header("Location: index.php");
         exit;
