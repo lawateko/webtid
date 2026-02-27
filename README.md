@@ -11,16 +11,16 @@ Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen Pak
 
 ## Login Default
 
-**Admin** : lemon@example.com | 123
-**Admin** : alpukat@example.com | 123
+**Admin** : lemon@gmail.com | 123
+**Admin** : alpukat@gmail.com | 123
 
-**User** : durian@example.com | 123
+**User** : durian@gmail.com | 123
 
 ## Screenshot Halaman
 
 | Halaman    | Gambar                   |
 | ---------- | ------------------------ |
-| Login      | ![Login](img/1.png)      |
+| Login      | ![Login Page](img/1.png)      |
 | Beranda    | ![Beranda](img/2.png)    |
 | Mahasiswa  | ![Mahasiswa](img/3.png)  |
 | Dosen      | ![Dosen](img/4.png)      |
@@ -30,11 +30,6 @@ Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen Pak
 | Galeri     | ![Galeri](img/8.png)     |
 | Kontak     | ![Kontak](img/9.png)     |
 
-## Cara Pakai
-
-1. Import database `fanuellawalata_ti3d.sql`
-2. Setting koneksi di `config/koneksi.php`
-3. Jalankan di browser
 
 ---
 
