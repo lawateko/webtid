@@ -1,31 +1,33 @@
 <?php
-$dbserver = 'localhost';
-$dbusername = 'root';
-$dbpassword = '';
-$dbname = 'fanuellawalata_ti3d';
+// config/koneksi.php
+$host = 'localhost';
+$dbname = 'fanuellawalata_ti3d'; // Sesuaikan dengan nama database Anda
+$username = 'root'; // Sesuaikan dengan username MySQL Anda
+$password = ''; // Sesuaikan dengan password MySQL Anda
 
+try {
+    $con = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $con->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Koneksi gagal: " . $e->getMessage());
+}
 
-try{
-    $con = new PDO('mysql:host=' . $dbserver . ';dbname=' . $dbname . ';charset=utf8', $dbusername, $dbpassword);
-    $con->setAttribute(PDO::ATTR_ERRMODE, pdo::ERRMODE_EXCEPTION);
-    } catch (PDOException $e){
-        echo "Koneksi Gagal : ". $e->getMessage() . "<br>";
-        die();
-        }
-        
-function query($query){
+function query($query)
+{
     global $con;
     $stmt = $con->prepare($query);
     $stmt->execute();
     $rows = [];
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $rows[] = $row;
     }
-        return $rows;
+    return $rows;
 }
 
 // function untuk search data pada tabel
-function cari_mahasiswa($keyword){
+function cari_mahasiswa($keyword)
+{
     $query = "SELECT * FROM 
               mahasiswa 
               WHERE 
@@ -37,7 +39,8 @@ function cari_mahasiswa($keyword){
     return query($query);
 }
 
-function cari_dosen($keyword){
+function cari_dosen($keyword)
+{
     $query = "SELECT * FROM 
               dosen 
               WHERE 
@@ -47,8 +50,3 @@ function cari_dosen($keyword){
               ";
     return query($query);
 }
-
-
-
-
-?>
