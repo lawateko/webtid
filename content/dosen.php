@@ -1,4 +1,11 @@
 <?php
+session_start();
+if(!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+
+
 require 'config/koneksi.php';
 $dosen = query("SELECT * FROM dosen ORDER BY no DESC");
 

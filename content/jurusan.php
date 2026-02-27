@@ -1,5 +1,11 @@
 <?php
-require 'config/koneksi.php';
+session_start();
+if(!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+
+require_once 'config/koneksi.php';
 $jurusan = query("SELECT * FROM jurusan");
 $dosen = query("SELECT nid, nama FROM dosen ORDER BY nama ASC");
 ?>

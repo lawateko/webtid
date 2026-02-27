@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if(!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+
+?>
+
 <div class="kontak container">
     <div class="row text-center mb-3">
         <div class="col">

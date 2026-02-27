@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <h2 class="galeri title">Galeri</h2>
 <form action="" method="POST" enctype="multipart/form-data">
     <input type="file" name="gambar">
