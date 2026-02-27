@@ -48,8 +48,8 @@ $role_user = isset($_SESSION["user_role"]) ? $_SESSION["user_role"] : "user";
                     <?php endif; ?>
                 </div>
                 <div class="navbar-nav ms-auto p-3 fw-medium">
-                    <span class="nav-link "><?= htmlspecialchars($nama_user) ?> - <?= htmlspecialchars($role_user) ?></span>
                     <a href="logout.php" class="nav-link fw-bold text-danger">Logout</a>
+                    <span class="nav-link "><?= htmlspecialchars($nama_user) ?> - <?= htmlspecialchars($role_user) ?></span>
                 </div>
             </div>
         </div>
