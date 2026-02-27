@@ -1,26 +1,26 @@
-# Aplikasi Manajemen Data TI3D - UAS Pemrograman Web
+# Website Manajemen Data Mahasiswa & Dosen - UAS Pemrograman Web
 
-Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen **Subhan Ramadhani, S.Kom**
+Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen Pak **Subhan Ramadhani, S.Kom**
 
-## Fitur Aplikasi
+## Fitur Website
 
 - Login dengan session
 - Multi level user (Admin & User)
 - CRUD + Search data Mahasiswa, Dosen, Matakuliah, Jurusan
-- Upload gambar di halaman Galeri
 - Hak akses berbeda tiap user
 
 ## Login Default
 
-**Admin** : lemon@example.com | 123
-            alpukat@example.com | 123
-**User** : durian@example.com | 123
+**Admin** : lemon@gmail.com | 123
+**Admin** : alpukat@gmail.com | 123
+
+**User** : durian@gmail.com | 123
 
 ## Screenshot Halaman
 
 | Halaman    | Gambar                   |
 | ---------- | ------------------------ |
-| Login      | ![Login](img/1.png)      |
+| Login      | ![Login Page](img/1.png)      |
 | Beranda    | ![Beranda](img/2.png)    |
 | Mahasiswa  | ![Mahasiswa](img/3.png)  |
 | Dosen      | ![Dosen](img/4.png)      |
@@ -30,12 +30,7 @@ Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen **S
 | Galeri     | ![Galeri](img/8.png)     |
 | Kontak     | ![Kontak](img/9.png)     |
 
-## Cara Pakai
-
-1. Import database `fanuellawalata_ti3d.sql`
-2. Setting koneksi di `config/koneksi.php`
-3. Jalankan di browser
 
 ---
 
-_Dibuat untuk memenuhi tugas UAS Pemrograman Web_
+_Dibuat untuk memenuhi UAS Pemrograman Web_
