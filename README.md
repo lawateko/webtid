@@ -38,4 +38,4 @@ Repository ini dibuat untuk menyelesaikan **UAS Pemrograman Web** dari dosen **S
 
 ---
 
-_Dibuat untuk memenuhi tugas UAS Pemrograman Web_
+_Dibuat untuk memenuhi UAS Pemrograman Web_
