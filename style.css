@@ -107,38 +107,41 @@ nav .navbar-nav .nav-link:hover {
 }
 
 .mahasiswa-container {
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
 
 .dosen-container {
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
 
 .jurusan-container {
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
 
-.matkul-card {
-  padding-top: 7rem;
+.matakuliah-container {
+  padding-top: 3rem;
 }
 
 .dosen {
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 .galeri {
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 .kontak {
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
 
-.table-mahasiswa{
+.table-mahasiswa {
   max-height: 334px;
 }
 
-.table-dosen{
+.table-dosen {
   max-height: 251px;
 }
 
+.table-matakuliah {
+  max-height: 236px;
+}
