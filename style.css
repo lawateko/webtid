@@ -91,7 +91,7 @@ textarea:focus::placeholder {
 nav .navbar-nav .nav-link {
   font-size: 1em;
   margin-right: 8px;
-  margin-left: 14px;
+  margin-left: 8px;
   color: #5a5a5a;
 }
 
