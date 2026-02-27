@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+$nama_user = isset($_SESSION["user_nama"]) ? $_SESSION["user_nama"] : "User";
+$role_user = isset($_SESSION["user_role"]) ? $_SESSION["user_role"] : "user";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,15 +29,27 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav p-3 fw-medium">
+                    <?php if ($role_user == "admin") : ?>
+                        <a href="index.php" class="nav-link">Beranda</a>
+                        <a href="index.php?page=mahasiswa" class="nav-link">Mahasiswa</a>
+                        <a href="index.php?page=dosen" class="nav-link">Dosen</a>
+                        <a href="index.php?page=matakuliah" class="nav-link">Matakuliah</a>
+                        <a href="index.php?page=jurusan" class="nav-link">Jurusan</a>
+                        <a href="index.php?page=user" class="nav-link">Pengguna</a>
+                        <a href="index.php?page=galeri" class="nav-link">Galeri</a>
+                        <a href="index.php?page=kontak" class="nav-link">Kontak</a>
+                    <?php else : ?>
+                        <a href="index.php" class="nav-link">Beranda</a>
+                        <a href="index.php?page=mahasiswa" class="nav-link">Mahasiswa</a>
+                        <a href="index.php?page=matakuliah" class="nav-link">Matakuliah</a>
+                        <a href="index.php?page=jurusan" class="nav-link">Jurusan</a>
+                        <a href="index.php?page=kontak" class="nav-link">Kontak</a>
+                    <?php endif; ?>
+                </div>
                 <div class="navbar-nav ms-auto p-3 fw-medium">
-                    <a href="index.php" class="nav-link">Beranda</a>
-                    <a href="index.php?page=mahasiswa" class="nav-link">Mahasiswa</a>
-                    <a href="index.php?page=dosen" class="nav-link">Dosen</a>
-                    <a href="index.php?page=matakuliah" class="nav-link">Matakuliah</a>
-                    <a href="index.php?page=jurusan" class="nav-link">Jurusan</a>
-                    <a href="index.php?page=user" class="nav-link">Pengguna</a>
-                    <a href="index.php?page=galeri" class="nav-link">Galeri</a>
-                    <a href="index.php?page=kontak" class="nav-link">Kontak</a>
+                    <span class="nav-link "><?= htmlspecialchars($nama_user) ?> - <?= htmlspecialchars($role_user) ?></span>
+                    <a href="logout.php" class="nav-link fw-bold text-danger">Logout</a>
                 </div>
             </div>
         </div>
@@ -35,6 +57,15 @@
 
     <div class="content">
         <?php
+
+        $page = isset($_GET['page']) ? $_GET['page'] : '';
+        if ($role_user != 'admin' && in_array($page, ['dosen', 'galeri', 'user'])) {
+            echo "<script>
+                alert('Mohon maaf! Halaman ini tidak dapat diakses.');
+                window.location.href = 'index.php';
+            </script>";
+            exit;
+        }
         # $_GET -> URL
 
         $page = @$_GET['page'];
@@ -48,7 +79,7 @@
 
         ?>
     </div>
-
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
